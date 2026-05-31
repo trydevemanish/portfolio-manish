@@ -14,14 +14,14 @@ export default function Home() {
     <main className="bg-black text-white min-h-screen sm:py-4">
       {
           checkNavMenuSelect ? 
-            <Navigation setCheckNavMenuSelect={setCheckNavMenuSelect} checkNavMenuSelect={checkNavMenuSelect} /> 
-            : 
-            <>
-              <Navbar setCheckNavMenuSelect={setCheckNavMenuSelect} checkNavMenuSelect={checkNavMenuSelect} />
-              <About />
-              <Project />
-              <Footer />
-            </>
+          <Navigation setCheckNavMenuSelect={setCheckNavMenuSelect} checkNavMenuSelect={checkNavMenuSelect} /> 
+          : 
+          <>
+            <Navbar setCheckNavMenuSelect={setCheckNavMenuSelect} checkNavMenuSelect={checkNavMenuSelect} />
+            <About />
+            <Project />
+            <Footer />
+          </>
       }
     </main>
   );
