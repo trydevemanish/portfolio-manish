@@ -20,7 +20,7 @@ export default function Navbar({checkNavMenuSelect,setCheckNavMenuSelect} : {che
       <div className='flex gap-5 items-center pr-4'>
         <HamburgerMenuIcon className='text-[18px] cursor-pointer hover:opacity-80 hover:text-cyan-400 xs:w-8 xs:h-8 sm:w-8 sm:h-8 xs:block sm:block md:block lg:hidden xl:hidden 2xl:hidden 3xl:hidden 4xl:hidden 5xl:hidden 6xl:hidden' onClick={handlenavtomenu} />
         <div className='flex justify-between gap-14'>
-          <p className='text-2xl font-semibold cursor-pointer opacity-60 hover:opacity-100 hover:text-cyan-400 xs:hidden sm:hidden md:hidden lg:block xl:block 2xl:block 3xl:block 4xl:block 5xl:block 6xl:block 5xl:text-4xl 6xl:text-5xl'><Link href={"/projects"} >Projects</Link></p>
+          {/* <p className='text-2xl font-semibold cursor-pointer opacity-60 hover:opacity-100 hover:text-cyan-400 xs:hidden sm:hidden md:hidden lg:block xl:block 2xl:block 3xl:block 4xl:block 5xl:block 6xl:block 5xl:text-4xl 6xl:text-5xl'><Link href={"/projects"} >Projects</Link></p> */}
           <p className='text-2xl font-semibold cursor-pointer opacity-60 hover:opacity-100 hover:text-cyan-400 xs:hidden sm:hidden md:hidden lg:block xl:block 2xl:block 3xl:block 4xl:block 5xl:block 6xl:block 5xl:text-4xl 6xl:text-5xl'><Link href={"/about"} >About</Link></p>
         </div>
       </div>

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons'
-import githubUser from "@/public/githubuser.png"
+import githubUser from "@/public/manish1.jpeg"
 import { Mail } from 'lucide-react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
@@ -16,47 +16,161 @@ export default function Page() {
     window.location.href = `mailto:${email}`
   }
 
-  return (
-    <div className="bg-black min-h-screen text-white py-10  xs:px-10 sm:px-12 md:px-24 lg:px-36 xl:px-40 2xl:px-72 3xl:pl-[26rem] 3xl:pr-[26rem] 4xl:pl-[38rem] 4xl:pr-[38rem] 5xl:pl-[50rem] 5xl:pr-[50rem] 6xl:pl-[60rem] 6xl:pr-[60rem] 7xl:pl-[80rem] 7xl:pr-[80rem]">
+  return (    
+    <div className="bg-black min-h-screen text-white py-10 xs:px-10 sm:px-12 md:px-24 lg:px-36 xl:px-40 2xl:px-72 3xl:pl-[26rem] 3xl:pr-[26rem] 4xl:pl-[38rem] 4xl:pr-[38rem] 5xl:pl-[50rem] 5xl:pr-[50rem] 6xl:pl-[60rem] 6xl:pr-[60rem] 7xl:pl-[80rem] 7xl:pr-[80rem]">
 
-      <div className=' flex flex-col'>
-        <Image src={githubUser} alt='Profile Image' className='w-60 h-60 rounded-lg xs:w-40 xs:h-40 sm:w-60 sm:h-60 md:w-60 md:h-60 lg:w-60 lg:h-60 xl:w-72 xl:h-72 2xl:w-72 2xl:h-72 3xl:w-72 3xl:h-72 4xl:w-80 4xl:h-80 5xl:w-80 5xl:h-80 6xl:w-80 6xl:h-80 7xl:w-80 7xl:h-80'/>
-        <div className='flex gap-7 items-center pt-6 py-6 xs:py-8 sm:py-10 md:py-10 lg:py-10 xl:py-10 2xl:py-10 3xl:py-10 4xl:py-10 5xl:py-10 6xl:py-10'>
-                <Mail className='text-[18px] cursor-pointer hover:opacity-80 hover:text-cyan-400 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-5 lg:h-5 xl:w-5 xl:h-5 3xl:w-6 3xl:h-6 2xl:w-5 2xl:h-5  4xl:w-6 4xl:h-6 5xl:w-6 5xl:h-6 6xl:w-6 6xl:h-6' width={15} height={15} onClick={handletoemail}/>
-                <GitHubLogoIcon className='text-[18px] cursor-pointer hover:opacity-80 hover:text-cyan-400 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-5 lg:h-5 xl:w-5 xl:h-5 3xl:w-6 3xl:h-6 2xl:w-5 2xl:h-5  4xl:w-6 4xl:h-6 5xl:w-6 5xl:h-6 6xl:w-6 6xl:h-6' width={15} height={15} onClick={() => router.push('https://github.com/manishSharma1-dev')}/>
-                <TwitterLogoIcon className='text-[18px] cursor-pointer hover:opacity-80 hover:text-cyan-400 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-5 lg:h-5 xl:w-5 xl:h-5 3xl:w-6 3xl:h-6 2xl:w-5 2xl:h-5  4xl:w-6 4xl:h-6 5xl:w-6 5xl:h-6 6xl:w-6 6xl:h-6' width={15} height={15} onClick={() => router.push('https://x.com/Manish1_sh')}/>
-                <LinkedInLogoIcon className='text-[18px] cursor-pointer hover:opacity-80 hover:text-cyan-400 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-5 lg:h-5 xl:w-5 xl:h-5 3xl:w-6 3xl:h-6 2xl:w-5 2xl:h-5  4xl:w-6 4xl:h-6 5xl:w-6 5xl:h-6 6xl:w-6 6xl:h-6' width={15} height={15} onClick={() => router.push('https:///www.linkedin.com/in/manish-sharma111')}/>
+  <div className='flex flex-col gap-16'>
+
+    {/* Top — image + social */}
+    <div className='flex flex-col gap-6'>
+      <div className='flex flex-col gap-1 w-fit'>
+        <Image
+          src={githubUser}
+          alt='Manish Sharma'
+          className='rounded-lg object-cover
+            w-40 h-40
+            xs:w-40 xs:h-40
+            sm:w-52 sm:h-52
+            md:w-56 md:h-56
+            lg:w-60 lg:h-60
+            xl:w-64 xl:h-64
+            2xl:w-72 2xl:h-72
+            5xl:w-80 5xl:h-80'
+        />
+        <p className='bg-cyan-400 w-full h-[2px] mt-1' />
+        <p className='bg-cyan-400 w-1/2 mt-1 h-[0.8px]' />
+        <p className='bg-cyan-400 w-1/4 mt-1 h-[0.7px]' />
+      </div>
+
+      <div className='flex items-center gap-3'>
+        {[
+          { icon: <Mail className='w-4 h-4 sm:w-5 sm:h-5' />, action: handletoemail },
+          { icon: <GitHubLogoIcon className='w-4 h-4 sm:w-5 sm:h-5' />, action: () => router.push('https://github.com/trydevemanish') },
+          { icon: <TwitterLogoIcon className='w-4 h-4 sm:w-5 sm:h-5' />, action: () => router.push('https://x.com/Manish1_sh') },
+          { icon: <LinkedInLogoIcon className='w-4 h-4 sm:w-5 sm:h-5' />, action: () => router.push('https://www.linkedin.com/in/manish-sharma111') },
+        ].map((item, i) => (
+          <button
+            key={i}
+            onClick={item.action}
+            className='w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center border border-white/10 rounded-lg text-white/30 hover:border-cyan-400/40 hover:text-cyan-400 transition-all duration-200'
+          >
+            {item.icon}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    {/* Bio */}
+    <div className='flex flex-col gap-10'>
+
+      {/* Name + status */}
+      <div className='flex flex-col gap-2'>
+        <h1 className='text-3xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl font-semibold tracking-tight'>
+          Manish Sharma
+        </h1>
+        <p className='text-xs sm:text-sm text-white/30 uppercase tracking-widest flex items-center gap-2'>
+          <span className='w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_6px_#22d3ee] animate-pulse inline-block' />
+          Final year CS · Open to SDE roles · Available for freelance
+        </p>
+      </div>
+
+      {/* About paragraphs */}
+      <div className='flex flex-col gap-6 text-white/50 leading-relaxed
+        text-sm xs:text-base sm:text-lg md:text-lg lg:text-xl xl:text-xl 2xl:text-xl 5xl:text-2xl 6xl:text-3xl'>
+
+        <p>
+          {"I'm"} a full-stack developer who has shipped production apps across web and mobile —
+          from a{' '}
+          <span className='text-white/80'>real-time multiplayer chess platform</span>
+          {' '}to an{' '}
+          <span className='text-white/80'>AI-powered food tracking app.</span>
+          {' '}I work across the full stack with React, Next.js, Node.js, Django, and PostgreSQL,
+          and I care about building things that actually work, not just look good in a README.
+        </p>
+
+        <p>
+          {"I've"} just given my final year exams and {"I'm"} actively looking for an{' '}
+          <span className='text-cyan-400'>SDE or full-stack developer role.</span>
+          {' '}{"I'm"} also open to freelance projects — {"I've"} already built and deployed
+          a client project using React, Express.js, MongoDB, and Nginx on Hostinger.
+        </p>
+
+        <p>
+          When {"I'm"} not coding {"I'm"} on the basketball court or going down a YouTube rabbit hole on some new tech.
+        </p>
+
+      </div>
+
+      {/* Tags */}
+      <div className='flex flex-wrap gap-2'>
+        {['React', 'Next.js', 'Node.js', 'Django', 'PostgreSQL', 'TypeScript', 'WebSocket', 'React Native'].map(tag => (
+          <span
+            key={tag}
+            className='text-[10px] sm:text-xs text-cyan-400 border border-cyan-400/20 rounded-full px-3 py-1 uppercase tracking-widest'
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+
+    </div>
+
+    {/* Footer */}
+    <footer className='relative overflow-hidden border-t border-white/[0.04] pt-16 pb-8'>
+
+      <p className='pointer-events-none select-none absolute bottom-0 left-1/2 -translate-x-1/2 text-[80px] sm:text-[100px] lg:text-[140px] font-black text-white/[0.03] tracking-tighter whitespace-nowrap'>
+        MANISH
+      </p>
+
+      <div className='flex justify-between items-start gap-6 mb-12 xs:flex-col sm:flex-row'>
+        <div className='flex flex-col gap-1'>
+          <p className='font-semibold text-white text-base sm:text-xl md:text-2xl'>Manish Sharma</p>
+          <p className='text-[11px] sm:text-xs text-white/30 tracking-widest uppercase flex items-center gap-2'>
+            <span className='w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_6px_#22d3ee] animate-pulse inline-block' />
+            Open to work · Delhi NCR
+          </p>
         </div>
-        <div className='flex flex-col  opacity-85 gap-8 leading-10 xs:text-base xs:w-[100%] sm:text-lg sm:w-[95%] md:text-xl lg:text-2xl xl:text-2xl 2xl:text-2xl 3xl:text-2xl 4xl:text-2xl 5xl:text-3xl 6xl:text-4xl'>
-          <p>Hi, {"I'm"} <span className='text-cyan-400'>Manish Sharma</span>, a 3rd-year Computer Science student and a passionate developer with a strong foundation in JavaScript, TypeScript, SQL, and MongoDB, along with experience in Python, C, and Java. Currently, {"I’m"} diving into Go, drawn by its powerful features like native concurrency, the defer keyword, and efficient garbage collection.</p>
-          <p>Beyond coding, {"I’m"} always eager to learn and stay up-to-date with the latest tech trends. Whether {"it's "}reading tech blogs, watching YouTube tutorials, or experimenting with new frameworks, {"I’m"} constantly expanding my knowledge. I also enjoy playing basketball and engaging in discussions about technology, innovation, and software development.</p>
-          <p>If {"you're"} interested in connecting over shared interests, discussing exciting tech ideas, or exploring collaboration opportunities, feel free to reach out!</p>
-        </div>
-        
-        <div className='pt-10'>
-          <p className='text-center opacity-50 leading-6'>Always open to learn, {"Let's"} have a quick Chat.</p>
+        <nav className='flex gap-6 items-center pt-1'>
+          {[['Home', '/'], ['Projects', '/projects'], ['About', '/about']].map(([label, path]) => (
+            <p
+              key={label}
+              onClick={() => router.push(path)}
+              className='text-[11px] uppercase tracking-widest text-white/30 hover:text-cyan-400 cursor-pointer transition-colors duration-200'
+            >
+              {label}
+            </p>
+          ))}
+        </nav>
+      </div>
 
-          <div className='flex justify-center items-center gap-5 xs:py-4 sm:py-4 md:py-4 lg:py-4 xl:py-6 2xl:py-7 3xl:py-8 4xl:py-8'>
-            <p className='hover:text-cyan-500 cursor-pointer' onClick={() => router.push("/")}>home</p>
-            <p className='hover:text-cyan-500 cursor-pointer' onClick={() => router.push("/about")}>About</p>
-            <p className='hover:text-cyan-500 cursor-pointer' onClick={() => router.push("/projects")}>Project</p>
-            <p className='hover:text-cyan-500 cursor-pointer' onClick={() => router.push("/blog")}>Blog</p>
-          </div>
+      <p className='text-sm sm:text-base text-white/25'>
+        Always open to learn —{' '}
+        <span className='text-cyan-400'>{"Let's have a quick chat."}</span>
+      </p>
 
-          <div className='flex justify-center items-center gap-4 pt-5'>
-            <Image src={githubUser} alt='User Profile' className='cursor-pointer hover:grayscale w-6 rounded-[50%] xs:w-10 sm:w-12 md:w-14 lg:w-14 xl:w-14 2xl:w-16 3xl:w-14 4xl:w-14 5xl:w-16 6xl:w-16'/>
-            <p className='font-semibold xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-2xl 3xl:text-3xl 4xl:text-3xl 5xl:text-3xl 6xl:text-4xl'>Manish Sharma</p>
-          </div>
-
-          <div className='flex gap-7 items-center justify-center pt-6 py-6 xs:py-8 sm:py-10 md:py-10 lg:py-10 xl:py-10 2xl:py-10 3xl:py-10 4xl:py-10 5xl:py-10 6xl:py-10'>
-            <Mail className='text-[18px] cursor-pointer hover:opacity-80 hover:text-cyan-400 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 3xl:w-8 3xl:h-8 2xl:w-8 2xl:h-8  4xl:w-8 4xl:h-8 5xl:w-9 5xl:h-9 6xl:w-10 6xl:h-10' width={15} height={15} onClick={handletoemail}/>
-            <GitHubLogoIcon className='text-[18px] cursor-pointer hover:opacity-80 hover:text-cyan-400 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 3xl:w-8 3xl:h-8 2xl:w-8 2xl:h-8  4xl:w-8 4xl:h-8 5xl:w-9 5xl:h-9 6xl:w-10 6xl:h-10' width={15} height={15} onClick={() => router.push('https://github.com/manishSharma1-dev')}/>
-            <TwitterLogoIcon className='text-[18px] cursor-pointer hover:opacity-80 hover:text-cyan-400 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 3xl:w-8 3xl:h-8 2xl:w-8 2xl:h-8  4xl:w-8 4xl:h-8 5xl:w-9 5xl:h-9 6xl:w-10 6xl:h-10' width={15} height={15} onClick={() => router.push('https://x.com/Manish1_sh')}/>
-            <LinkedInLogoIcon className='text-[18px] cursor-pointer hover:opacity-80 hover:text-cyan-400 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 3xl:w-8 3xl:h-8 2xl:w-8 2xl:h-8  4xl:w-8 4xl:h-8 5xl:w-9 5xl:h-9 6xl:w-10 6xl:h-10' width={15} height={15} onClick={() => router.push('https:///www.linkedin.com/in/manish-sharma111')}/>
-          </div>
+      <div className='flex justify-between items-center mt-8 pt-6 border-t border-white/[0.05] xs:flex-col xs:gap-4 sm:flex-row'>
+        <p className='text-[11px] text-white/15'>© 2026 Manish Sharma</p>
+        <div className='flex items-center gap-3'>
+          {[
+            { icon: <Mail className='w-3.5 h-3.5' />, action: handletoemail },
+            { icon: <GitHubLogoIcon className='w-3.5 h-3.5' />, action: () => router.push('https://github.com/trydevemanish') },
+            { icon: <TwitterLogoIcon className='w-3.5 h-3.5' />, action: () => router.push('https://x.com/Manish1_sh') },
+            { icon: <LinkedInLogoIcon className='w-3.5 h-3.5' />, action: () => router.push('https://www.linkedin.com/in/manish-sharma111') },
+          ].map((item, i) => (
+            <button
+              key={i}
+              onClick={item.action}
+              className='w-8 h-8 flex items-center justify-center border border-white/10 rounded-lg text-white/30 hover:border-cyan-400/40 hover:text-cyan-400 transition-all duration-200'
+            >
+              {item.icon}
+            </button>
+          ))}
         </div>
       </div>
-  
-    </div>
+
+    </footer>
+
+  </div>
+</div>
   )
 }
