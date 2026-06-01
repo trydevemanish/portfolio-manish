@@ -1,8 +1,8 @@
 "use client"
 
 import React from 'react'
-import Image from 'next/image' 
-import githubUser from "@/public/githubuser.png"
+// import Image from 'next/image' 
+// import githubUser from "@/public/githubuser.png"
 import { GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons'
 import { Mail } from 'lucide-react'
 import { useRouter } from 'next/navigation'

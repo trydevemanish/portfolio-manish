@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { LinkIcon } from 'lucide-react'
+// import { LinkIcon } from 'lucide-react'
 import Link from 'next/link'
 import { ProjectData,ProjectFieldType } from "@/components/ProjectData"
 

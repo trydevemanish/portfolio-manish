@@ -1,7 +1,7 @@
 import xmate from '@/public/xmate.png'
 import buildHackathon from '@/public/buildyourhackathonteam.png'
 import mindmap from '@/public/mindmap.png'
-import project3 from "@/public/project3.png"
+import project3 from "@/public/trackbite.jpeg"
 import { StaticImageData } from 'next/image'
 
 // export type ProjectFieldType = {
